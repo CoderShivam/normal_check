@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 const app = express();
 
 // Load environment variables
-config({ path: "./config/config.env" });
+config({ path: "./config/.env" });
 
 // Database connection
 dbConnection();
@@ -33,8 +33,9 @@ app.use("/user", userRouter);
 
 // Start the server
 // app.use('/api/companies', Company);
+const PORT = process.env.PORT || 4000 
 app.listen(process.env.PORT, () => {
-  console.log(`Server is listening on port ${process.env.PORT}`);
+  console.log(`Server is listening on port ${PORT}`);
 }).on("error", (err) => {
   console.error("Server Error:", err);
 });

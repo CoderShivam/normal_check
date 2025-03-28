@@ -28,6 +28,7 @@ const Login = () => {
       setUser(response.data.user); // Set user data after login
       console.log(response.data.token);
       console.log("Login successful:", response.data);
+      localStorage.setItem("user", JSON.stringify(response.data.user));
       navigate("/arena"); // Redirect to Arena on success
     } catch (error) {
      

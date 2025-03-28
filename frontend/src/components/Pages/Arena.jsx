@@ -35,6 +35,7 @@ const Arena = () => {
   const handleLogout = () => {
     // Clear any session data or authentication state if needed
     localStorage.removeItem("authToken");
+    localStorage.removeItem("user");
     navigate("/");
   };
 

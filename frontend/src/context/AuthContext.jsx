@@ -1,11 +1,19 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
+import Login from "../components/Auth/Login";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-
+  const [loading,setLoading] = useState(true);
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+    setLoading(false);
+  }, []);
   // Function to fetch user data
   const fetchUser = async () => {
     try {
@@ -24,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, setUser }}>
+    <AuthContext.Provider value={{ user, setUser,Login,loading}}>
       {children}
     </AuthContext.Provider>
   );
