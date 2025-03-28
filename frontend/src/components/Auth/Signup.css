@@ -1,0 +1,107 @@
+/* Background Styling */
+/* body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* Register Container Styling */
+.register-container {
+  display: flex;
+  background: linear-gradient(135deg, #6f86d6, #48c6ef);
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.register-box {
+  background: white;
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.register-box h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #48c6ef;
+  box-shadow: 0 0 8px rgba(72, 198, 239, 0.4);
+}
+
+/* Register Button Styling */
+.register-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #6f86d6, #48c6ef);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #48c6ef, #6f86d6);
+}
+
+.register-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .register-box h2 {
+    font-size: 24px;
+  }
+
+  .input-group input {
+    font-size: 12px;
+  }
+
+  .register-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
